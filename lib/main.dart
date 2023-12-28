@@ -9,6 +9,8 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
+  List names = ["cecep","agus","sule","ladusing"];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,27 +27,12 @@ class MyApp extends StatelessWidget {
             }, icon: Icon(Icons.logout))
           ],
         ),
-        body: Column(
-          mainAxisAlignment : MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.brown,
-            ),
-            Container(
-              height: 150,
-              width: 150,
-              color: Colors.brown[600],
-            ),
-            Expanded(
-              child: Container(
-                width: 100,
-                color: Colors.brown[700],
-              ),
-            )
-          ],)
+        body: ListView.builder(
+          itemCount: names.length,
+          itemBuilder: (context, index) => ListTile(
+            title: Text(names[index]),
+          ),
+          )
         ));
   }
 }
