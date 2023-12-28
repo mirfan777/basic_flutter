@@ -23,7 +23,12 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(25)
             ),
             padding: EdgeInsets.all(25),
-            
+            child: Text("hello world",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 28,
+                fontWeight: FontWeight.bold
+              ),) ,
         )),
       ),
     );
