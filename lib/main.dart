@@ -12,8 +12,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.amber[100],
+        appBar: AppBar(
+          title: Text("my app"),
+          backgroundColor: Colors.yellow[200],
+          leading: Icon(Icons.menu),
+          actions: [
+            IconButton(onPressed: () {
+
+            }, icon: Icon(Icons.logout))
+          ],
+        ),
         body: Center(
           child: Container(
             height: 300,
@@ -25,8 +36,8 @@ class MyApp extends StatelessWidget {
             padding: EdgeInsets.all(25),
             child: Icon(
               Icons.access_alarm,
-              color: Colors.deepOrange,
-              size: 41,
+              color: Colors.white,
+              size: 100,
             )
         )),
       ),
