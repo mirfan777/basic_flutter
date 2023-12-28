@@ -14,7 +14,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.amber[100],
-        
+        body: Center(
+          child: Container(
+            height: 300,
+            width: 300,
+            decoration: BoxDecoration(
+              color: Colors.brown,
+              borderRadius: BorderRadius.circular(25)
+            ),
+            padding: EdgeInsets.all(25),
+            
+        )),
       ),
     );
   }
