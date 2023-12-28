@@ -25,22 +25,27 @@ class MyApp extends StatelessWidget {
             }, icon: Icon(Icons.logout))
           ],
         ),
-        body: Center(
-          child: Container(
-            height: 300,
-            width: 300,
-            decoration: BoxDecoration(
+        body: Column(
+          mainAxisAlignment : MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 200,
+              width: 200,
               color: Colors.brown,
-              borderRadius: BorderRadius.circular(25)
             ),
-            padding: EdgeInsets.all(25),
-            child: Icon(
-              Icons.access_alarm,
-              color: Colors.white,
-              size: 100,
+            Container(
+              height: 150,
+              width: 150,
+              color: Colors.brown[600],
+            ),
+            Expanded(
+              child: Container(
+                width: 100,
+                color: Colors.brown[700],
+              ),
             )
-        )),
-      ),
-    );
+          ],)
+        ));
   }
 }
