@@ -27,12 +27,25 @@ class MyApp extends StatelessWidget {
             }, icon: Icon(Icons.logout))
           ],
         ),
-        body: GridView.builder(
-          itemCount: 64,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 8),
-          itemBuilder: (context, index) => Container(
-            color: Colors.amber,
-            margin: EdgeInsets.all(2),),
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              height: 300,
+              width: 300,
+              color: Colors.brown,
+            ),
+            Container(
+              height: 200,
+              width: 200,
+              color: Colors.brown[600],
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.brown[700],
+            )
+          ],
           )
         )
       );
