@@ -27,25 +27,17 @@ class MyApp extends StatelessWidget {
             }, icon: Icon(Icons.logout))
           ],
         ),
-        body: Stack(
-          alignment: Alignment.center,
-          children: [
-            Container(
-              height: 300,
-              width: 300,
-              color: Colors.brown,
-            ),
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.brown[600],
-            ),
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.brown[700],
+        body: Center(
+            child : GestureDetector(
+              onTap: () => {
+                print("User tapped!")
+              },
+              child: Container(
+                height: 300,
+                width: 300,
+                color: Colors.brown,
+                child: Center(child: Text("tap me"))),
             )
-          ],
           )
         )
       );
