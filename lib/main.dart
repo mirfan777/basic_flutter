@@ -6,6 +6,10 @@ void main() {
   runApp(MyApp());
 }
 
+void userTapped(){
+  print("user tapped");
+}
+
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
@@ -29,9 +33,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
             child : GestureDetector(
-              onTap: () => {
-                print("User tapped!")
-              },
+              onTap: userTapped,
               child: Container(
                 height: 300,
                 width: 300,
