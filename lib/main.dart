@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors_in_immutables
 
 import 'package:basic_flutter/pages/first_page.dart';
-import 'package:basic_flutter/pages/second_page.dart';
+import 'package:basic_flutter/pages/home_page.dart';
+import 'package:basic_flutter/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,8 +24,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: FirstPage(),
       routes: {
-        '/secondpage': (context) => SecondPage(),
         '/firstpage':(context) => FirstPage(),
+        '/home':(context) => Home(),
+        '/settings':(context) => Settings(),
       },
     );
   }
