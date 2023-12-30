@@ -13,34 +13,17 @@ class FirstPage extends StatelessWidget {
           title: Center(child: Text("first page")),
           backgroundColor: Colors.yellow[200],
         ),
-        drawer: Drawer(
-          backgroundColor: Colors.yellow,
-          child : Column(children: [
-            ListTile(
-              leading: Icon(
-                Icons.home,
-                size: 40,
-              ),
-              title: Text("home"),
-              onTap: () => {
-                Navigator.pop(context),
-
-                Navigator.pushNamed(context, '/home')
-              }
-            ),
-            ListTile(
-              leading: Icon(
-                Icons.settings,
-                size: 40,
-              ),
-              title: Text("settings"),
-              onTap: () => {
-                Navigator.pushNamed(context, '/settings')
-              }
-              
-            )
-          ],)
-        ),
+        bottomNavigationBar: BottomNavigationBar(items: 
+        [BottomNavigationBarItem(
+          icon: Icon(Icons.home), 
+          label: "Home"),
+          BottomNavigationBarItem(
+          icon: Icon(Icons.person), 
+          label: "Profile"),
+          BottomNavigationBarItem(
+          icon: Icon(Icons.settings), 
+          label: "Settings"),
+        ]),
     );
   }
 }
