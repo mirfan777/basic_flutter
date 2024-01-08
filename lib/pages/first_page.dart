@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import "package:basic_flutter/pages/counter.dart";
 import "package:basic_flutter/pages/home_page.dart";
 import "package:basic_flutter/pages/settings_page.dart";
 import "package:flutter/material.dart";
@@ -23,7 +24,8 @@ class _FirstPageState extends State<FirstPage> {
   final List _pages = [
     Home(),
     FirstPage(),
-    Settings()
+    Settings(),
+    Counter()
   ];
 
   @override
@@ -48,6 +50,9 @@ class _FirstPageState extends State<FirstPage> {
           BottomNavigationBarItem(
           icon: Icon(Icons.settings), 
           label: "Settings"),
+          BottomNavigationBarItem(
+          icon: Icon(Icons.settings), 
+          label: "Counter"),
         ]),
     );
   }
